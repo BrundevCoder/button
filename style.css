@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +40,8 @@ main {
 }
 
 .btn {
+    font-family: "Syne", sans-serif;
+    font-weight: 900;
     border: 2px solid #8b1c1c;
     background: #FF4141;
     width: 80%;
@@ -56,4 +60,15 @@ main {
 
 .btn:active {
     transform: scale(0.9);
+}
+
+.corner {
+    font-family: "Syne", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ddd;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
