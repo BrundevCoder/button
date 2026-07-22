@@ -40,6 +40,7 @@ main {
 }
 
 .btn {
+    cursor: pointer;
     font-family: "Syne", sans-serif;
     font-weight: 900;
     border: 2px solid #8b1c1c;
@@ -71,4 +72,99 @@ main {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.settings-corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1.15rem;
+}
+
+#settings-btn {
+    cursor: pointer;
+    font-family: "Syne", sans-serif;
+    font-weight: 800;
+    padding: 1.05rem;
+    border-radius: 10px;
+    border: 3px solid #000;
+    background: #FF4141;
+    transition: 110ms ease;
+}
+
+#settings-btn:hover {
+    transform: scale(1.05);
+}
+
+#settings-btn:active {
+    transform: scale(.9);
+}
+
+.settings-panel {
+    display: none;
+    position: absolute;
+    padding: 2rem;
+    background: #3338369a;
+    backdrop-filter: blur(7px);
+    border-radius: 12px;
+}
+
+.active {
+    display: block;
+}
+
+.settings-panel p {
+    text-align: center;
+    color: #fff;
+    font-family: "Syne", sans-serif;
+    font-size: 1.75rem;
+}
+
+.grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px 8px;
+}
+
+.btn-color {
+    cursor: pointer;
+    min-width: 55px;
+    min-height: 55px;
+    border: none;
+    border-radius: 12px;
+    transition: 100ms ease-in;
+}
+
+.btn-color:hover {
+    transform: scale(1.05) rotateZ(8deg);
+}
+
+.btn-color:active {
+    transform: scale(.9) rotateZ(0);
+}
+
+#blueBtn {
+    background: #548aa3;
+    border: 2px solid #2b5061;
+}
+
+#redBtn {
+    background: #FF4141;
+    border: 2px solid #8b1c1c;
+}
+
+#pinkBtn {
+    background: #d15cd1;
+    border: 2px solid #58055f;
+}
+
+#yellowBtn {
+    background: #c2c048;
+    border: 2px solid #4d4806;
+}
+
+#summerBtn {
+    background: linear-gradient(-65deg, #e7e55a, #548aa3);
+    border: 2px solid #4e8fad;
 }
