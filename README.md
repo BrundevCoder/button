@@ -31,6 +31,6 @@ That's simple! You just need to click the button, just like that! But... Dependi
 - They are just the counters!
 Here's a more detailed explanation:
 
-> `MAX`: count what your highest score was!
-> `TOTAL`: Keep track of how many clicks you've already made on the button.
-> `RESETS`: It only counts the number of times you returned to 0.
+- `MAX`: count what your highest score was!
+- `TOTAL`: Keep track of how many clicks you've already made on the button.
+- `RESETS`: It only counts the number of times you returned to 0.
