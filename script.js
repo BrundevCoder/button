@@ -1,33 +1,37 @@
 const button = document.getElementById("button");
 const maxDisplay = document.getElementById("max-displayer");
 const totalDisplay = document.getElementById("total-displayer");
+const resetDisplay = document.getElementById("resets-displayer");
 const settingsBtn = document.getElementById("settings-btn");
 
 let points = 0;
 let chance = 1;
 let max = 0;
 let total = 0;
+let resets = 0;
 
 function buttonOnClick() {
     if (Math.random() < chance) {
         total++;
         points++;
         chance -= 0.01;
+
+        new Audio("click.mp3").play();
     }
     else {
         points = 0;
         chance = 1;
+        resets++;
     }
 
     if (max < points) {
         max = points;
     }
 
-    new Audio("click.mp3").play();
-
     button.innerText = `${points}`;
     maxDisplay.innerText = `${max}`;
     totalDisplay.innerText = `${total}`;
+    resetDisplay.innerText = `${resets}`;
 }
 
 button.addEventListener("click", buttonOnClick);
