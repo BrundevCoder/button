@@ -23,6 +23,8 @@ function buttonOnClick() {
         max = points;
     }
 
+    new Audio("click.mp3").play();
+
     button.innerText = `${points}`;
     maxDisplay.innerText = `${max}`;
     totalDisplay.innerText = `${total}`;
