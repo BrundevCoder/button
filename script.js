@@ -4,6 +4,8 @@ const totalDisplay = document.getElementById("total-displayer");
 const resetDisplay = document.getElementById("resets-displayer");
 const settingsBtn = document.getElementById("settings-btn");
 
+let pressed = false;
+
 let points = 0;
 let chance = 1;
 let max = 0;
@@ -11,6 +13,12 @@ let total = 0;
 let resets = 0;
 
 function buttonOnClick() {
+    if (pressed) {
+        return;
+    }
+
+    pressed = true;
+
     if (Math.random() < chance) {
         total++;
         points++;
@@ -32,9 +40,25 @@ function buttonOnClick() {
     maxDisplay.innerText = `${max}`;
     totalDisplay.innerText = `${total}`;
     resetDisplay.innerText = `${resets}`;
+
+    setTimeout(() => {
+        pressed = false;
+    }, 125);
 }
 
 button.addEventListener("click", buttonOnClick);
+document.body.addEventListener("keypress", () => {
+    button.focus();
+    buttonOnClick();
+});
+document.body.addEventListener("click", () => {
+    button.focus();
+    buttonOnClick();
+});
+document.body.addEventListener("mousedown", () => {
+    button.focus();
+    buttonOnClick();
+});
 
 settingsBtn.addEventListener("click", () => {
     const settingScreen = document.getElementById("set-s");
