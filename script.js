@@ -15,8 +15,6 @@ function buttonOnClick() {
         total++;
         points++;
         chance -= 0.01;
-
-        new Audio("click.mp3").play();
     }
     else {
         points = 0;
@@ -27,6 +25,8 @@ function buttonOnClick() {
     if (max < points) {
         max = points;
     }
+
+    new Audio("click.mp3").play();
 
     button.innerText = `${points}`;
     maxDisplay.innerText = `${max}`;
